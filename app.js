@@ -3,5 +3,9 @@ const problem = require('./problem/problem')
 
 // Problem: 
 
+// Example: 
+
 // Calling the solution
-problem.solution('args')
+let result = problem.solution('args')
+
+console.log(result);
