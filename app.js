@@ -9,3 +9,5 @@ const problem = require("./problem/problem");
 // Calling the solution
 let result = problem.solution([1,2,3], [4,1,9]);
 console.log(result);
+let resultRefactored = problem.solutionRefactored([1,2,3], [4,1,9]);
+console.log(resultRefactored);

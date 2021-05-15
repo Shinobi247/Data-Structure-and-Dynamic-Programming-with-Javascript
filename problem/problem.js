@@ -17,7 +17,27 @@ const solution = function (array1, array2) {
   return true;
 };
 
+const solutionRefactored = function (array1, array2) {
+  if (array1.length !== array2.length) {
+    return false;
+  }
+  let frequencyCounter1 = {};
+  let frequencyCounter2 = {};
+  for (let key of array1) {
+    frequencyCounter1[key] = (frequencyCounter1[key] || 0) + 1;
+  }
+  for (let key of array2) {
+    frequencyCounter2[key] = (frequencyCounter2[key] || 0) + 1;
+  }
+
+  for (let key in frequencyCounter1) {
+    if (!(key ** 2 in frequencyCounter2)) return false;
+    if (frequencyCounter2[key ** 2] !== frequencyCounter1[key]) return false;
+  }
+  return true;
+};
 
 module.exports = {
   solution,
+  solutionRefactored,
 };
