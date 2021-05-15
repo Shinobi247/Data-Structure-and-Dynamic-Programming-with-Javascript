@@ -1,7 +1,11 @@
-const problem = require('./problem/problem') 
+const problem = require("./problem/problem");
 
-
-// Problem: 
+// Problem: // Problem: Write a function, which accepts two arrays. The function should return true if every value in the array has it's corresponding value squared in the second array. The frequency of values must be the same.
+// Example
+// ([1,2,3], [4,1,9]) // true
+// ([1,2,3], [1,9]) // false
+// ([1,2,1], [4,4,1]) // false (must be same frequency)
 
 // Calling the solution
-problem.solution('args')
+let result = problem.solution([1,2,3], [4,1,9]);
+console.log(result);
